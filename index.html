@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main intro">
+        <h1> Do you wanna play with me?</h1>
+        <h1> معليش تلعب معايا؟؟</h1>
+        <img class="main-img" src="cat.jpeg" >
+        <div class="no">
+            <button> NO </button>
+        </div>
+        <button class="yes">YES</button>
+       <img src="killu.png" alt="" class="killu">
+       <div class="start">
+        <p> هيهي راني غي نزعق😅</p>
+        <button>let's play</button>
+       </div>
+    </section>
+   
+   
+    <section class="game">
+        <div class="score">
+          <div class="player-score">
+            <h2>YOU</h2>
+            <p>0</p>
+          </div>
+          <div class="computer-score">
+            <h2>Me</h2>
+            <p>0</p>
+          </div>
+        </div>
+      <div class="match fadeOut">
+          <h2 class="winner">Choose an option</h2>
+          <div class="hands">
+            <img class="player-hand" src="rock.png" alt="" />
+            <img class="computer-hand" src="rock.png" alt="" />
+          </div>
+          <div class="options">
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
+          </div>
+        </div>
+        <div class="winer">
+            <button >back</button>
+            <!-- <img src="mewin.jpeg" alt="">
+                 <h1>  يا ضراا كي جيتك 😉 </h1>-->    
+             </div>
+         
+      </section>
+    
+  
+<script src="game.js"></script>
+    <script>
+    /*   let Plyscore = document.querySelector(".player-score p").textContent  = "0";
+       let PCscore =  document.querySelector(".computer-score p").textContent ="0";
+           if (Plyscore === 3 ){
+        
+             document.querySelector("secton .winer ").style.display = "block"
+             document.querySelector(".winer img").src = "uwin.jpeg"
+             document.querySelector(".winer h1").textContent = "ايا بصحتك "
+     }
+           if (PCscore === 3 ){
+              document.querySelector( " secton .winer ").style.display = "block"
+               document.querySelector(".winer img").src = "mewin.jpeg"
+         
+      }*/
+        
+            
+            document.querySelector(".winer button").addEventListener("click" , function(){
+               document.querySelector(".game").style.transform = "translateY(200%) ";
+              document.querySelector(".main").style.display = "block";
+
+             })
+          
+                  document.querySelector(".yes").addEventListener("click" , function(){
+                    alert("thank u A zin <3 مي عٍقزت نكمل اللعبة" );
+                    document.querySelector(".start").style.display = "block";
+
+                   })
+
+                   document.querySelector(".no").addEventListener("click" , function(){
+                     document.querySelector(".killu").style.opacity = "1";
+                    alert("فرحان بروحك ياك " );
+                       setTimeout(() => {
+                        document.querySelector(".killu").style.opacity = "0";
+                    }, 3000);             
+                   })
+                
+                   document.querySelector(".start button").addEventListener("click" , function(){
+                    document.querySelector(".main").style.display = "none";
+                    document.querySelector(".game").style.transform = "translateY(0) ";
+
+                   })
+    </script>
+
+</body>
+</html>
